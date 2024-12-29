@@ -29,7 +29,6 @@ header{
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
-    align-items: center;
     z-index: 100;
 }
 .dark-mode{
@@ -44,6 +43,29 @@ nav a.dark-mode-class,
 section.dark-mode-class{
     color: black;
     background-color: white;
+}
+.menu-botao{
+    display: none;
+}
+.menu-list{
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    justify-content: space-between;
+}
+.menu-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    color: white;
+}
+.menu-list a{
+    text-decoration: none;
+    color: white;
 }
 .logo{
     font-size: 3rem;
@@ -70,31 +92,23 @@ nav a.active{
 }
 @media(max-width:995px){
     nav{
-        position: absolute;
         display: none;
-        top: 0;
-        right: 0;
-        width: 40%; 
-        border-left: 3px solid #007bff;
-        border-bottom: 3px solid #007bff;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
     }
-    nav.active{
-        display: block;
-    }
-    nav a{
+    .menu-botao{
+        position: absolute;
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        cursor: pointer;
     }
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #007bff;
+    .menu-list ul{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        background-color: #24252a;
+        padding: 1.5rem;
+    }
+    .open{
+        display: block;
     }
 }
 section{
@@ -117,7 +131,7 @@ span{
     color: #007bff;
 }
 .home-content h3{
-    font-size: 4rem;
+    font-size: 6rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
