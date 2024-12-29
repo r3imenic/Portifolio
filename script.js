@@ -39,3 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
         darkModeIcon.style.color = "white";
     }
 });
+
+function menuShow() {
+    let menuMobile = document.querySelector('.menu-list')
+    if(menuMobile.classList.contains('open')){
+        menuMobile.classList.remove('open')
+        document.querySelector('menu-botao i').class = "fa-solid fa-xmark"
+    } else{
+        menuMobile.classList.add('open')
+    }
+}
