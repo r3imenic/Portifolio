@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
-    <title>Portfolio - Contato</title>
-  </head>
-  <body>
+    <title>Portfolio</title>
+</head>
+<body>
     <header>
-      <a href="index.html" class="logo">r3imenic</a>
-      <nav>
-          <a href="index.html">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Skills</a>
-          <a href="#">Education</a>
-          <a href="#">Experience</a>
-          <a href="contato.html" class="active">Contact</a>
-      </nav>
-      <div class="dark-mode" onclick="ligthDarkMode()">
-          <i class="fa-solid fa-moon"></i>
-      </div>
-      <div class="menu">
-          <div class="menu-botao" onclick="menuShow()">
-              <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="menu-list">
-              <ul>
-                  <li><a href="index.html" class="active">Home</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Skills</a></li>
-                  <li><a href="#">Education</a></li>
-                  <li><a href="#">Experience</a></li>
-                  <li><a href="contato.html">Contact</a></li>
-              </ul>
-          </div>
-      </div>
-  </header>
-    <main></main>
-    <footer></footer>
-  </body>
-  <script src="script.js"></script>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <span>r3i</span>menic
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Inicio</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">Sobre mim</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Habilidades</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Estudos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contato.html">Contato</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dark-mode" onclick="ligthDarkMode()">
+            <i class="fa-solid fa-moon" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"></i>
+        </div>
+    </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Inicio</a>
+                <a href="#">Sobre mim</a>
+                <a href="#">Habilidades</a>
+                <a href="#">Estudos</a>
+                <a href="contato.html">Contato</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+</body>
 </html>
