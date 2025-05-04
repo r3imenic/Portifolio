@@ -41,7 +41,7 @@ function hamburg(){
   
   function ligthDarkMode() {
     const darkModeIcon = document.querySelector(".dark-mode i");
-    const elements = document.querySelectorAll("body, .nav-container .links a, content");
+    const elements = document.querySelectorAll("body, .nav-container .links a, .content");
   
     // Alterna entre ícones de lua e sol
     darkModeIcon.classList.toggle("fa-sun");
@@ -64,7 +64,7 @@ function hamburg(){
   document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
     const darkModeIcon = document.querySelector(".dark-mode i");
-    const elements = document.querySelectorAll("body, .nav-container .links a, content");
+    const elements = document.querySelectorAll("body, .nav-container .links a, .content");
   
     if (savedTheme === "dark") {
         darkModeIcon.classList.add("fa-sun");
@@ -80,3 +80,19 @@ function hamburg(){
         darkModeIcon.style.color = "white";
     }
   });
+
+  let lastScrollTop = 0;
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scrollando para baixo -> Esconde o header
+    header.style.top = "-100px";
+  } else {
+    // Scrollando para cima -> Mostra o header
+    header.style.top = "0";
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
+});
